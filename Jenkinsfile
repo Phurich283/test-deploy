@@ -5,6 +5,8 @@ pipeline {
         HARBOR_REGISTRY = "http://192.168.1.150"
         HARBOR_PROJECT = "view"
         IMAGE_NAME = "view-app"
+        IMAGE_TAG = "latest"
+        JD_IMAGE = "${HARBOR_REGISTRY}/${HARBOR_PROJECT}/${IMAGE_NAME}:${IMAGE_TAG}"
     }
 
     stages {
@@ -16,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.build("${HARBOR_REGISTRY}/${HARBOR_PROJECT}/${IMAGE_NAME}:latest")
+                    docker.build("${JD_IMAGE}")
                 }
             }
         }
@@ -24,7 +26,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry("${HARBOR_REGISTRY}", 'harbor_credentials') {
-                        docker.image("${HARBOR_REGISTRY}/${HARBOR_PROJECT}/${IMAGE_NAME}:latest").push()
+                        docker.image("${JD_IMAGE}").push()
                     }
                 }
             }
