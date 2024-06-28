@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        HARBOR_REGISTRY = "http://192.168.1.150"
+        HARBOR_REGISTRY = "192.168.1.150"
         HARBOR_PROJECT = "view"
         IMAGE_NAME = "view-app"
         IMAGE_TAG = "latest"
@@ -25,7 +25,7 @@ pipeline {
         stage('Push') {
             steps {
                 script {
-                    docker.withRegistry("${HARBOR_REGISTRY}", 'harbor_credentials') {
+                    docker.withRegistry("http://${HARBOR_REGISTRY}", 'harbor_credentials') {
                         docker.image("${JD_IMAGE}").push()
                     }
                 }
