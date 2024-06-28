@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-repo.git', credentialsId: 'github_token'
+                git branch: 'main', url: 'https://github.com/Phurich283/test-deploy', credentialsId: 'github_token'
             }
         }
         stage('Build') {
