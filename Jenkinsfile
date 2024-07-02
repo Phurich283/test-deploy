@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        HARBOR_REGISTRY = "192.168.1.150"
+        HARBOR_REGISTRY = "192.168.1.77"
         HARBOR_PROJECT = "view"
         IMAGE_NAME = "view-app"
         IMAGE_TAG = "latest"
