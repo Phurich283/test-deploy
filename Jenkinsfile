@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        HARBOR_REGISTRY = "192.168.1.77"
-        HARBOR_PROJECT = "view"
+        HARBOR_REGISTRY = "192.168.1.79"
+        HARBOR_PROJECT = "test_deploy"
         IMAGE_NAME = "view-app"
         IMAGE_TAG = "latest"
         JD_IMAGE = "${HARBOR_REGISTRY}/${HARBOR_PROJECT}/${IMAGE_NAME}:${IMAGE_TAG}"
