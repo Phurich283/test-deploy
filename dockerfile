@@ -19,5 +19,4 @@ RUN npm run build
 # Expose the port that your app runs on
 EXPOSE 3000
 
-# Command to run your app
 CMD ["npm", "start"]
