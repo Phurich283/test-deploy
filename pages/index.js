@@ -87,7 +87,7 @@ export default function Home() {
       </Head>
       <h1>Tic Tac Toe</h1>
       <div className="game">
-        <div className="game__menu5">
+        <div className="game__menu">
           <p>{xTurn === true ? "X Turn" : "O Turn"}</p>
           <p>{`Game Won:${won} Draw: ${isDraw}`}</p>
         </div>
