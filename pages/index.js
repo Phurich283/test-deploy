@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Tic Tac Toe</title>
+        <title>Tic Tac Toe view</title>
       </Head>
       <h1>Tic Tac Toe</h1>
       <div className="game">
