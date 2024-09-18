@@ -83,11 +83,11 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Tic Tac Toe </title>
+        <title>Tic Tac Toe view 123456</title>
       </Head>
       <h1>Tic Tac Toe </h1>
       <div className="game">
-        <div className="game__menu view 123456">
+        <div className="game__menu ">
           <p>{xTurn === true ? "X Turn" : "O Turn"}</p>
           <p>{`Game Won:${won} Draw: ${isDraw}`}</p>
         </div>
