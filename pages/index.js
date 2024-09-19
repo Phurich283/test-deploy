@@ -85,7 +85,7 @@ export default function Home() {
       <Head>
         <title>Tic Tac Toe view </title>
       </Head>
-      <h1>Tic Tac Toe view 1234</h1>
+      <h1>Tic Tac Toe </h1>
       <div className="game">
         <div className="game__menu ">
           <p>{xTurn === true ? "X Turn" : "O Turn"}</p>
